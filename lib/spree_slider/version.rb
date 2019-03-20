@@ -9,7 +9,7 @@ module SpreeSlider
 
   module VERSION
     MAJOR = 3
-    MINOR = 4
+    MINOR = 7
     TINY  = 0
     PRE   = 'alpha'.freeze
 
