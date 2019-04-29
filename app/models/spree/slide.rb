@@ -5,13 +5,13 @@ class Spree::Slide < ActiveRecord::Base
                           join_table: 'spree_slide_slide_locations'
 
   has_attached_file :image,
-                    url: '/spree/slides/desktop/:id/:style/:basename.:extension',
+                    url: ':rails_root/public/spree/slides/desktop/:id/:style/:basename.:extension',
                     path: ':rails_root/public/spree/slides/desktop/:id/:style/:basename.:extension',
                     convert_options: { all: '-strip -auto-orient -colorspace sRGB' }
   validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
   has_attached_file :mobile_image,
-                    url: '/spree/slides/mobile/:id/:style/:basename.:extension',
+                    url: ':rails_root/public/spree/slides/mobile/:id/:style/:basename.:extension',
                     path: ':rails_root/public/spree/slides/mobile/:id/:style/:basename.:extension',
                     convert_options: { all: '-strip -auto-orient -colorspace sRGB' }
   validates_attachment :mobile_image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
