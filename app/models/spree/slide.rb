@@ -17,8 +17,8 @@ class Spree::Slide < ActiveRecord::Base
   scope :image_slides, -> { published.where(product_id: nil).order('position ASC') }
 
   STYLES = {
-    preview: [120, 120],
-    thumbnail: [240, 240]
+    preview: '120x120',
+    thumbnail: '240x240'
   }.freeze
 
   def initialize(attrs = nil)
@@ -50,6 +50,6 @@ class Spree::Slide < ActiveRecord::Base
   private
 
   def image_form(form)
-    slide_image.variant(resize_to_limit: STYLES[form])
+    slide_image.variant(resize: STYLES[form])
   end
 end
