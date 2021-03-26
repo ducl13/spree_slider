@@ -65,4 +65,23 @@
       <% end %>
     <% end %>
   </div>
+
+  <div class="col-md-6">
+    <%= f.field_container :mobile_image do %>
+      <%= f.label :mobile_image, t(:mobile_image) %> <i>(<%= t('spree_slider.image_tip') %>)</i><br>
+      <%= f.file_field :mobile_image %>
+    <% end %>
+  </div>
+
+  <div class="col-md-6">
+    <%= f.field_container :mobile_image do %>
+      <% if f.object.mobile_image.attached? %>
+        <p>
+          <%= label_tag t(:preview) %>
+          <br>
+          <%= image_tag main_app.url_for(f.object.mobile_thumbnail), class: 'img-responsive' %>
+        </p>
+      <% end %>
+    <% end %>
+  </div>
 </div>
