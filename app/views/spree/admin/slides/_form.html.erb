@@ -47,6 +47,13 @@
     <% end %>
   </div>
 
+  <div class="col-md-12">
+    <%= f.field_container :mobile_body do %>
+      <%= f.label :mobile_body, t(:mobile_body) %><br>
+      <%= f.text_area :mobile_body, {cols: 60, rows: 4, class: 'fullwidth form-control'} %>
+    <% end %>
+  </div>
+
   <div class="col-md-6">
     <%= f.field_container :image do %>
       <%= f.label :image, t(:image) %> <i>(<%= t('spree_slider.image_tip') %>)</i><br>
