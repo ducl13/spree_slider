@@ -3,6 +3,7 @@ en:
   previous: 'Previous'
   name: 'Name'
   body: 'Body'
+  mobile_body: 'Mobile Body'
   link_url: 'Link URL'
   image: 'Image'
   mobile_image: 'Mobile Image'
