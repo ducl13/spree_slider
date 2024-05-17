@@ -32,6 +32,14 @@ class Spree::Slide < ActiveRecord::Base
     name.blank? && product.present? ? product.name : name
   end
 
+  def slide_mobile_name
+    mobile_name.present? ? mobile_name : slide_name
+  end
+
+  def slide_mobile_body
+    mobile_body.present? ? mobile_body : body
+  end
+
   def slide_link
     link_url.blank? && product.present? ? product : link_url
   end
